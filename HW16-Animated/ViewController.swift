@@ -16,7 +16,9 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       
-        self.myView.frame = CGRect(x: Int.random(in: 1..<250), y: Int.random(in: 1..<400), width: 100, height: 100)
+        self.myView.frame = CGRect(x: Int.random(in: 1..<250),
+                                   y: Int.random(in: 1..<400),
+                                   width: 100, height: 100)
         self.myView.backgroundColor = .random
         self.myView.layer.cornerRadius = 50
         
@@ -27,7 +29,9 @@ final class ViewController: UIViewController {
     
     @IBAction func startButton(_ sender: UIButton) {
         UIView.animate(withDuration: 1, animations: {
-            self.myView.frame = CGRect(x:(Int(self.view.frame.size.width) - 100)/2, y: Int(self.view.frame.size.height) - 200, width: 100, height: 100)
+            self.myView.frame = CGRect(x:(Int(self.view.frame.size.width) - 100)/2,
+                                       y: Int(self.view.frame.size.height) - 200,
+                                       width: 100, height: 100)
             self.view.layoutSubviews()
             
         }, completion: {_ in
@@ -40,9 +44,9 @@ final class ViewController: UIViewController {
                        
     @IBAction func actionButton(_ sender: UIButton) {
         UIView.animate(withDuration: 1, animations: {
-            self.myView.frame = CGRect(x: Int.random(in: 1..<250), y: Int.random(in: 1..<400), width: 100, height: 100)
-            //self.myView.center = self.view.center
-            
+            self.myView.frame = CGRect(x: Int.random(in: 1..<250),
+                                       y: Int.random(in: 1..<400),
+                                       width: 100, height: 100)
         })
     }
 
